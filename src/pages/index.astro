@@ -18,12 +18,14 @@ const data = (await res.json()) as { said: number; lastStream: number };
 		<title>Días desde que Midzui</title>
 	</head>
 	<body>
-		<h1>Días desde que Midzui</h1>
+		<h1>Han pasado</h1>
 		<div class="elements">
-			<h2 class="dijo title">Dijo que<br />volvía para siempre</h2>
 			<p class="dijo element">{data.said}</p>
-			<h2 class="stream title">Hizo stream</h2>
+			<h2 class="dijo title">
+				días desde que Midzui dijo que volvía "esta vez para siempre"
+			</h2>
 			<p class="stream element">{data.lastStream}</p>
+			<h2 class="stream title">días desde que Midzui stream</h2>
 		</div>
 	</body>
 </html>
@@ -52,14 +54,14 @@ const data = (await res.json()) as { said: number; lastStream: number };
 	.elements {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 4rem 1fr;
+		grid-template-rows: auto 1fr;
 		gap: 2rem;
 	}
 
 	.title {
 		font-size: larger;
 		text-align: center;
-		grid-row: 1 / 2;
+		grid-row: 2 / 3;
 		margin: 0;
 		margin-top: auto;
 		margin-bottom: auto;
@@ -73,5 +75,9 @@ const data = (await res.json()) as { said: number; lastStream: number };
 		text-align: center;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
+	}
+
+	.dijo.title {
+		max-width: 20rem;
 	}
 </style>
