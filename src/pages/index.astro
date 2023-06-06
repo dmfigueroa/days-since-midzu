@@ -1,6 +1,6 @@
 ---
 const getData = async () => {
-	const res = await fetch(`${import.meta.env.HOSTNAME_URL}/api/days`);
+	const res = await fetch(`${import.meta.env.SITE}/api/days`);
 	return (await res.json()) as { said: number; lastStream: number };
 };
 ---

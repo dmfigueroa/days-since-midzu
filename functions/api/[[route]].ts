@@ -30,6 +30,4 @@ app.get("/days", async (c) => {
   return c.json({ said, lastStream });
 });
 
-export type AppRoute = typeof app;
-
 export const onRequest = handle(app);
