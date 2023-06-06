@@ -1,8 +1,11 @@
 ---
-const getData = async () => {
-	const res = await fetch(`${import.meta.env.SITE}/api/days`);
-	return (await res.json()) as { said: number; lastStream: number };
-};
+const res = await fetch(`${import.meta.env.SITE}/api/days`, {
+	method: "GET",
+	headers: {
+		"Content-Type": "application/json",
+	},
+});
+const data = (await res.json()) as { said: number; lastStream: number };
 ---
 
 <html lang="es">
@@ -17,9 +20,9 @@ const getData = async () => {
 		<h1>Días desde que Midzui</h1>
 		<div class="elements">
 			<h2 class="dijo title">Dijo que<br />volvía para siempre</h2>
-			<p class="dijo element">{(await getData()).said}</p>
+			<p class="dijo element">{data.said}</p>
 			<h2 class="stream title">Hizo stream</h2>
-			<p class="stream element">{(await getData()).lastStream}</p>
+			<p class="stream element">{data.lastStream}</p>
 		</div>
 	</body>
 </html>

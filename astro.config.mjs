@@ -15,7 +15,7 @@ const getSite = () => {
   } else if (CF_PAGES && !["master", "main"].includes(CF_PAGES_BRANCH)) {
     return CF_PAGES_URL;
   } else {
-    return "http://localhost:3000";
+    return "http://localhost:8788";
   }
 };
 
