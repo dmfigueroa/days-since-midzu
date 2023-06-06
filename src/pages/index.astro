@@ -1,7 +1,11 @@
 ---
+const getData = async () => {
+	const res = await fetch(`${import.meta.env.HOSTNAME_URL}/api/days`);
+	return (await res.json()) as { said: number; lastStream: number };
+};
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -10,6 +14,10 @@
 		<title>Días desde que Midzui</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>Días desde que Midzui</h1>
+		<h2>Dijo que volvía para siempre</h2>
+		<p>{(await getData()).said} días</p>
+		<h2>Hizo stream</h2>
+		<p>{(await getData()).lastStream} días</p>
 	</body>
 </html>
