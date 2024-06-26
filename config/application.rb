@@ -16,7 +16,9 @@ module DaysSinceMidzu
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w(assets tasks))
 
-    config.active_record.sqlite3_production_warning=false
+    config.active_record.sqlite3_production_warning = false
+
+    config.active_support.message_encryptor.use_authenticated_message_encryption = true
 
     # Configuration for the application, engines, and railties goes here.
     #
