@@ -1,2 +1,10 @@
-<h1>Since#show</h1>
-<p>Find me in app/views/since/show.html.erb</p>
+<h1>Han pasado</h1>
+
+<div class="elements">
+  <p class="dijo element"><%= days_since @data.said %></p>
+  <h2 class="dijo title">
+    días desde que Midzui dijo que volvía "esta vez para siempre"
+  </h2>
+  <p class="stream element"><%= days_since @data.last_stream %></p>
+  <h2 class="stream title">días desde el último stream</h2>
+</div>
