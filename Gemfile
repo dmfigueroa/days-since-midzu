@@ -75,3 +75,5 @@ gem "foreman", "~> 0.88.1"
 gem "httparty", "~> 0.22.0"
 
 gem "dotenv-rails", "~> 3.1"
+
+gem "net-protocol", "~> 0.2.2"
