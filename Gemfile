@@ -65,3 +65,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "litestack", "~> 0.4.4"
+
+gem "litestream", "~> 0.10.4"
+
+gem "foreman", "~> 0.88.1"
