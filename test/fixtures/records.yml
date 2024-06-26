@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  last_stream: 2024-06-25
+  said: 2024-06-25
+
+two:
+  last_stream: 2024-06-25
+  said: 2024-06-25
