@@ -71,3 +71,7 @@ gem "litestack", "~> 0.4.4"
 gem "litestream", "~> 0.10.4"
 
 gem "foreman", "~> 0.88.1"
+
+gem "httparty", "~> 0.22.0"
+
+gem "dotenv-rails", "~> 3.1"
