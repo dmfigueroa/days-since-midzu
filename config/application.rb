@@ -18,8 +18,6 @@ module DaysSinceMidzu
 
     config.active_record.sqlite3_production_warning = false
 
-    config.active_support.message_encryptor.use_authenticated_message_encryption = true
-
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
