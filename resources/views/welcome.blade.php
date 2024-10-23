@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <title>Dias desde que Midzu</title>
     <style>
         body {
             width: 100dvw;
