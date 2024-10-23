@@ -57,7 +57,7 @@
     <div class="elements">
         <p class="dijo element">{{ $said }}</p>
         <h2 class="dijo title">
-            días desde que Midzui dijo que volvía "esta vez para siempre"
+            días desde que Midzui dijo que volvía a hacer streams "esta vez para siempre"
         </h2>
         <p class="stream element">{{ $last_stream }}</p>
         <h2 class="stream title">días desde el último stream</h2>
