@@ -30,16 +30,19 @@ RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz
 FROM base
 
 # Copy the app files...
-COPY . /www/html
+COPY composer* /www/html/
 
 # Move to workdir
 WORKDIR /www/html
 
+# Re-run install, but now with scripts and optimizing the autoloader (should be faster)...
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader
+
 # Expose service
 EXPOSE 8080
 
-# Re-run install, but now with scripts and optimizing the autoloader (should be faster)...
-RUN composer install --no-interaction --prefer-dist --optimize-autoloader
+# Copy the app files...
+COPY . /www/html
 
 # Precompiling assets for production
 RUN yarn install --immutable && \
