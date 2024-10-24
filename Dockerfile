@@ -31,6 +31,7 @@ FROM base
 
 # Copy the app files...
 COPY composer* /www/html/
+COPY artisan /www/html/artisan
 
 # Move to workdir
 WORKDIR /www/html
